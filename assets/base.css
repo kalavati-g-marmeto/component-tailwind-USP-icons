@@ -600,6 +600,24 @@ details > * {
   --animation-fade-in: fadeIn var(--duration-extra-long) var(--ease-out-slow);
 }
 
+/* component-grid */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  padding: 0;
+  list-style: none;
+  column-gap: var(--grid-mobile-horizontal-spacing);
+  row-gap: var(--grid-mobile-vertical-spacing);
+}
+
+@media screen and (min-width: 750px) {
+  .grid {
+    column-gap: var(--grid-desktop-horizontal-spacing);
+    row-gap: var(--grid-desktop-vertical-spacing);
+  }
+}
+
 .underlined-link,
 .customer a,
 .inline-richtext a {
@@ -887,22 +905,7 @@ summary::-webkit-details-marker {
 }
 
 /* component-grid */
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
-  padding: 0;
-  list-style: none;
-  column-gap: var(--grid-mobile-horizontal-spacing);
-  row-gap: var(--grid-mobile-vertical-spacing);
-}
 
-@media screen and (min-width: 750px) {
-  .grid {
-    column-gap: var(--grid-desktop-horizontal-spacing);
-    row-gap: var(--grid-desktop-vertical-spacing);
-  }
-}
 
 .grid:last-child {
   margin-bottom: 0;
@@ -3516,4 +3519,15 @@ details-disclosure > details {
   .animate--hover-vertical-lift .button:not([disabled]).button--secondary:hover:after {
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
   }
+}
+
+.usp-icon-image-with-text .splide__arrow--prev {
+  right: 10%;
+}
+
+.usp-icon-image-with-text .splide__arrow--next {
+  right: 0%;
+}
+.usp-icon-image-with-text .splide__arrow {
+  top: -40px;
 }

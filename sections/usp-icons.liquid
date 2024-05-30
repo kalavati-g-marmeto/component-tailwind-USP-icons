@@ -1,0 +1,194 @@
+{% style %}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="usp-icon-image-with-text {% unless section.settings.select_pagewidth %} page-width {% endunless %} section-{{ section.id }}-padding">
+  <div class="usp-icon-image-with-text__container color-{{ section.settings.color_scheme }}">
+    {% if section.settings.section_title != blank %}
+      <h1 class="h1 font-bold mb-8 {{ section.settings.text_alignment }}">{{ section.settings.section_title }}</h1>
+    {% endif %}
+    <carousel-component
+      class=" splide"
+      data-autoplay="{{ section.settings.enable_autoplay | default: false }}"
+      data-autoplay-speed="{{ section.settings.autoplay_speed | times: 1000 | default: 3000  }}"
+      data-mobileperpage="{{ section.settings.slides_perpage | default: 1 }}"
+      data-showarrowsonmobile="{{ section.settings.enable_arrows |  default: false }}"
+      data-showdotsonmobile="{{ section.settings.enable_pagination | default: false }}"
+      data-focus="left"
+      data-type="splide"
+    >
+      <div class="splide__track">
+        <div class="usp-icon-image-with-text__wrapper splide__list md:grid md:grid-cols-4 gap-x-8 flex flex-nowrap ">
+          {% for block in section.blocks %}
+            <div class="usp-icon-image-with-text__items splide__slide md:!w-[unset] center">
+              <div class="icon-media flex justify-center">
+                {% if block.settings.svg_icons != blank %}
+                  {% render 'image', desktopImage: block.settings.svg_icons, mobileImage: block.settings.svg_icons %}
+                {% endif %}
+              </div>
+              <div class="icon-with-text ">
+                {% if block.settings.icon_title_text != blank %}
+                  <p class="h4 my-4">{{ block.settings.icon_title_text }}</p>
+                {% endif %}
+              </div>
+              <div class="icon-with-description">
+                {% if block.settings.icon_description_text != blank %}
+                  {{ block.settings.icon_description_text }}
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </carousel-component>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "USP section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "select_pagewidth",
+      "label": "Enable Full width",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Section Title"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "options": [
+        {
+          "value": "text-left",
+          "label": "Left"
+        },
+        {
+          "value": "text-center",
+          "label": "Center"
+        },
+        {
+          "value": "text-right",
+          "label": "Right"
+        }
+      ],
+      "default": "text-left",
+      "label": "Content alignment"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "SLIDER SETTINGS"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_pagination",
+      "label": "Pagedots",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_autoplay",
+      "label": "Autoplay",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_arrows",
+      "label": "Enable Arrows",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "label": "Autoplay interval",
+      "min": 2,
+      "max": 6,
+      "default": 3,
+      "info": "Default 3s"
+    },
+    {
+      "type": "number",
+      "id": "slides_perpage",
+      "label": "Slides perpage",
+      "default": 2,
+      "info": "Default 2 slides"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 0
+    }
+  ],
+  "max_blocks": 4,
+  "blocks": [
+    {
+      "type": "usp-blocks",
+      "name": "USP blocks",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "svg_icons",
+          "label": "USP Icons"
+        },
+        {
+          "type": "text",
+          "id": "icon_title_text",
+          "label": "Icon Title text",
+          "default": "Sustainability"
+        },
+        {
+          "type": "richtext",
+          "id": "icon_description_text",
+          "label": "Icon Description text",
+          "default": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "USP section"
+    }
+  ]
+}
+{% endschema %}
