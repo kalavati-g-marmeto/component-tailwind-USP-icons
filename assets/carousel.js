@@ -108,3 +108,4 @@ class Carousel extends HTMLElement {
 }
 
 customElements.define('carousel-component', Carousel);
+
