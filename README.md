@@ -24,8 +24,10 @@ Utilize this section to detail the component, explaining the specific problem it
    Navigate to `theme.liquid` file under Layout folder
    
   - ### Step 2:
-	 Add the below code / Copy the code from `src` folder and paste it in
-   `theme.liquid` file just above closing of `</body>` tag
+	 Added `application.js` in `theme.liqud` to watch the tailwind css
+
+ - ### Step 3:
+	By running the command npm run watch you can generate the tailwind css
 
 # Important Notes
 
