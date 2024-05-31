@@ -7,11 +7,15 @@ Utilize this section to detail the component, explaining the specific problem it
 
 ## Features
 
- - Feature 1 [*Example: Option to show / hide slider dots*]
+ - Feature 1 [ Option to show / hide slider dots*]
+ - Feature 2 [ Option to show / hide slider arrows*]
+ - Feature 3 [ Option to show / hide slider autoplay*]
+ - Feature 4 [ Option to show / hide page width*]
 
 ## Dependencies
 
- - Dependency 1 [*Example: Splide slider (https://splidejs.com/)*]
+ - Dependency 1 [ Splide slider (https://splidejs.com/)*]
+ - Dependancy 2 [Tailwind css]
 
 
 ## Implementation Steps
