@@ -1,61 +1,103 @@
 {
   "sections": {
-    "usp_icons_M3mfMy": {
-      "type": "usp-icons",
+    "image_banner": {
+      "type": "image-banner",
       "blocks": {
-        "usp_blocks_DW3pWb": {
-          "type": "usp-blocks",
+        "heading": {
+          "type": "heading",
           "settings": {
-            "svg_icons": "shopify:\/\/shop_images\/ban.png",
-            "icon_title_text": "Sustainability",
-            "icon_description_text": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<\/p>"
+            "heading": "Browse our latest products",
+            "heading_size": "h0"
           }
         },
-        "usp_blocks_QUYp68": {
-          "type": "usp-blocks",
+        "button": {
+          "type": "buttons",
           "settings": {
-            "svg_icons": "shopify:\/\/shop_images\/ban.png",
-            "icon_title_text": "Sustainability",
-            "icon_description_text": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<\/p>"
-          }
-        },
-        "usp_blocks_jmw4ft": {
-          "type": "usp-blocks",
-          "settings": {
-            "svg_icons": "shopify:\/\/shop_images\/ban.png",
-            "icon_title_text": "Sustainability",
-            "icon_description_text": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<\/p>"
-          }
-        },
-        "usp_blocks_Bwi76T": {
-          "type": "usp-blocks",
-          "settings": {
-            "svg_icons": "shopify:\/\/shop_images\/ban.png",
-            "icon_title_text": "Sustainability",
-            "icon_description_text": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<\/p>"
+            "button_label_1": "Shop all",
+            "button_link_1": "shopify:\/\/collections\/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
-        "usp_blocks_DW3pWb",
-        "usp_blocks_QUYp68",
-        "usp_blocks_jmw4ft",
-        "usp_blocks_Bwi76T"
+        "heading",
+        "button"
       ],
       "settings": {
-        "section_title": "Section Title",
-        "text_alignment": "center",
-        "enable_pagination": true,
-        "enable_autoplay": false,
-        "enable_arrows": true,
-        "autoplay_speed": 3,
-        "slides_perpage": 1.7,
-        "padding_top": 50,
-        "padding_bottom": 50
+        "image_overlay_opacity": 40,
+        "image_height": "large",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
+        "padding_bottom": 36
+      }
+    },
+    "image_overlay_RzebX7": {
+      "type": "image-overlay",
+      "settings": {
+        "enable__pagewidth": true,
+        "image_desktop": "shopify:\/\/shop_images\/slide-2_f57e9800-3ee2-4b27-9cc5-a1201b942a9f.webp",
+        "image_mobile": "shopify:\/\/shop_images\/Frame_2_94f8c0a2-fc06-4b29-ac3f-386d56513b8f.webp",
+        "heading": "Collections",
+        "heading_size": "h1",
+        "sub_heading": "Sub collections",
+        "text_style": "subtitle",
+        "content": "<p><strong>Lorem Ipsum<\/strong>is simply dummy text of the printing and typesetting industry.<\/p>",
+        "content_text_style": "body",
+        "primary_button_link": "shopify:\/\/collections",
+        "primary_button_text": "Button 1",
+        "button_style_secondary_1": false,
+        "secondary_button_link": "shopify:\/\/collections",
+        "secondary_button_text": "Button 2",
+        "button_style_secondary_2": true,
+        "color_scheme": "",
+        "text_alignment": "text-center",
+        "mobile_text_alignment": "text-center",
+        "desktop_content_position": "middle-center",
+        "padding_top": 0,
+        "padding_bottom": 80
       }
     }
   },
   "order": [
-    "usp_icons_M3mfMy"
+    "image_banner",
+    "featured_collection",
+    "image_overlay_RzebX7"
   ]
 }
