@@ -1,4 +1,4 @@
-# Sample Component
+# Tailwind USP Icons
 
 Utilize this section to detail the component, explaining the specific problem it addresses, its ideal use cases, and step-by-step instructions on how to implement it. This comprehensive description will help users understand its relevance and functionality, ensuring they can effectively integrate and leverage the component in their Shopify storefronts. 
 
@@ -24,7 +24,7 @@ Utilize this section to detail the component, explaining the specific problem it
    Navigate to `theme.liquid` file under Layout folder
    
   - ### Step 2:
-	 Added `application.js` in `theme.liqud` to watch the tailwind css
+	 Added `application.css` in `theme.liqud` to watch the tailwind css
 
  - ### Step 3:
 	By running the command `npm run watch` you can generate the tailwind css
