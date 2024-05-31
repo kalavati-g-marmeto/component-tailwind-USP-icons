@@ -2,7 +2,7 @@
 
 Utilize this section to detail the component, explaining the specific problem it addresses, its ideal use cases, and step-by-step instructions on how to implement it. This comprehensive description will help users understand its relevance and functionality, ensuring they can effectively integrate and leverage the component in their Shopify storefronts. 
 
-**Live Preview Link**: https://dummyimage.com/
+**Live Preview Link**: https://kalavati-store.myshopify.com/?preview_theme_id=168887615791
 
 
 ## Features
@@ -15,8 +15,6 @@ Utilize this section to detail the component, explaining the specific problem it
 ## Dependencies
 
  - Dependency 1 [*Example: Splide slider (https://splidejs.com/)*]
- - Dependency 2 [*Example: Animate CSS (https://animate.style/)*]
- - Dependency 3 [*Example: Google sheet API Key*]
 
 
 ## Implementation Steps
