@@ -8,9 +8,6 @@ Utilize this section to detail the component, explaining the specific problem it
 ## Features
 
  - Feature 1 [*Example: Option to show / hide slider dots*]
- - Feature 2 [*Example: Option to switch layout grid / slider*]
- - Feature 3 [*Example: Option to customise rating stars*]
-
 
 ## Dependencies
 
