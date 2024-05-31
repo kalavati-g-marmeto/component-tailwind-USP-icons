@@ -27,7 +27,7 @@ Utilize this section to detail the component, explaining the specific problem it
 	 Added `application.js` in `theme.liqud` to watch the tailwind css
 
  - ### Step 3:
-	By running the command npm run watch you can generate the tailwind css
+	By running the command `npm run watch` you can generate the tailwind css
 
 # Important Notes
 
