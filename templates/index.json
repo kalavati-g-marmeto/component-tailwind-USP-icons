@@ -55,11 +55,11 @@
         "select_pagewidth": false,
         "section_title": "Section Title",
         "text_alignment": "center",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-701f01a7-179f-450f-ac56-8932dfff6300",
         "enable_pagination": true,
         "enable_autoplay": false,
         "enable_arrows": true,
-        "autoplay_speed": 3,
+        "autoplay_speed": 4,
         "slides_perpage": 1.7,
         "padding_top": 50,
         "padding_bottom": 50
